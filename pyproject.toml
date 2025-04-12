@@ -1,12 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "video-depth-anything"
 version = "0.1.0"
 description = "Unofficial installable wrapper for https://github.com/DepthAnything/Video-Depth-Anything"
 dependencies = []
 
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[tool.setuptools]
+[tool.hatch.build]
 packages = ["video_depth_anything"]
+
+[tool.hatch.build.targets.wheel]
+include = [
+    "assets/**/*",
+    "benchmark/**/*",
+    "utils/**/*",
+    "video_depth_anything/**/*",
+    "app.py",
+    "run.py",
+    "get_weights.sh"
+]
