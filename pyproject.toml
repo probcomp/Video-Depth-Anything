@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "video-depth-anything"
-version = "0.1.0"
+version = "0.1.2"
 description = "DepthAnything runner with assets and top-level scripts"
 dependencies = [
 ]
