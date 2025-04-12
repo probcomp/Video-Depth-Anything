@@ -1,0 +1,5 @@
+[project]
+name = "video-depth-anything"
+version = "0.1.0"
+description = "Wrapper for Video Depth Anything"
+dependencies = []
