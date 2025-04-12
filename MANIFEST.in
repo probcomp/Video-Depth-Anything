@@ -1,0 +1,6 @@
+include run.py
+include app.py
+include get_weights.sh
+recursive-include assets *
+recursive-include utils *
+recursive-include benchmark *
