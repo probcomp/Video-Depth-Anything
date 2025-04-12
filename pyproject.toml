@@ -1,21 +1,15 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "video-depth-anything"
-version = "0.1.2"
+version = "0.1.3"
 description = "DepthAnything runner with assets and top-level scripts"
-dependencies = [
-]
+dependencies = []
 
-[tool.hatch.build.targets.wheel]
-include = [
-  "video_depth_anything/**/*",
-  "utils/**/*",
-  "assets/**/*",
-  "benchmark/**/*",
-  "run.py",
-  "app.py",
-  "get_weights.sh"
-]
+[tool.setuptools]
+packages = ["video_depth_anything"]
+
+[tool.setuptools.package-data]
+video_depth_anything = ["**/*.py", "../*.py", "../*.sh", "../assets/**/*", "../utils/**/*", "../benchmark/**/*"]
